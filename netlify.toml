@@ -6,21 +6,13 @@
     HUGO_THEME = "hugo-theme-stack"
 
 [context.production]
-    command = "hugo --gc --themesDir ../.. -b ${URL}"
+    command = "hugo --gc"
     [context.production.environment]
         HUGO_ENV = "production"
 
 [context.branch-deploy]
-    command = "hugo --gc --themesDir ../.. -b ${DEPLOY_PRIME_URL}"
+    command = "hugo --gc"
 
 [context.deploy-preview]
-    command = "hugo --gc --themesDir ../.. -b ${DEPLOY_PRIME_URL}"
+    command = "hugo --gc"
 
-[[plugins]]
-    package = "netlify-plugin-hugo-cache-resources"
-
-        [plugins.inputs]
-            # If it should show more verbose logs (optional, default = true)
-            debug = true
-            # Relative path to source directory in case you use Hugo's "--s" option
-            srcdir = "exampleSite"
