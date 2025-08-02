@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 // Main colour scheme
 :root {
@@ -14,47 +15,88 @@
     --tertiary: #f77f00;
     --accent: #fcbf49;
     --accent_darker: #fa9f25;
-    --base-font-family: "EB Garamond";
 }
 
+// Colors
 :root {
-    body {
-        background-color: var(--lightest);
-        color: var(--darkest);
-    }
-
     --card-background: var(--lighter);
     --pre-background-color: white;
     --code-background-color: var(--dark);
     --code-text-color: white;
+    body {
+        background-color: var(--lightest);
+        color: var(--darkest);
+    }
+    a {
+        transition: color 0.3s ease-in-out;
+        color: var(--darkest) !important;
+    }
+    a:hover {
+        color: var(--primary) !important;
+        transition: color 0.1s ease-in-out;
+    }
+    .article-category > a {
+        background-color: var(--light) !important;
+    }
+    .article-tags > a {
+        background-color: var(--light) !important;
+    }
     &[data-scheme="dark"] {
-        body {
-            background-color: var(--darkest);
-            color: var(--lightest);
-        }
         --card-background: var(--darker);
         --pre-background-color: black;
         --code-background-color: var(--dark);
         --code-text-color: var(--accent);
+        body {
+            background-color: var(--darkest);
+            color: var(--lightest);
+        }
+        a {
+            transition: color 0.3s ease-in-out;
+            color: var(--lightest) !important;
+        }
+        a:hover {
+            color: var(--accent) !important;
+            transition: color 0.1s ease-in-out;
+        }
+        .article-category > a {
+            background-color: var(--dark) !important;
+        }
+        .article-tags > a {
+            background-color: var(--dark) !important;
+        }
     }
 }
 
+// Positioning & Sizing
 :root {
-    a {
-        transition: color 0.3s ease-in-out;
+    --menu-icon-separation: 1em;
+    .left-sidebar {
+        max-width: 15%;
     }
-    a:hover {
-        color: var(--primary);
-        transition: color 0.1s ease-in-out;
+    .right-sidebar {
+        max-width: 30%;
     }
-    &[data-scheme="dark"] {
-        a {
-            transition: color 0.3s ease-in-out;
-        }
-        a:hover {
-            color: var(--accent);
-            transition: color 0.1s ease-in-out;
-        }
+}
+
+// Typography
+:root {
+    font-size: 0.8em;
+    pre {
+        font-size: 0.8em;
+    }
+    --base-font-family: "Montserrat", sans-serif;
+    .main-article {
+        font-family: "EB Garamond" !important;
+    }
+    .article-title {
+        font-family: "EB Garamond" !important
+    }
+    .article-content {
+        font-family: "EB Garamond";
+    }
+    #TableOfContents {
+        font-family: "EB Garamond";
+        font-weight: 800;
     }
 }
 
@@ -62,6 +104,11 @@
     .site-avatar {
         width: unset !important;
         height: unset !important;
+        @media screen and (max-width: 980px) {
+            width: 150px !important;
+            height: 150px !important;
+            
+        }
     }
 }
 
@@ -96,5 +143,11 @@
     }
     #main-menu {
         border-radius: 10px !important;
+        gap: 0;
+        li {
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+        }
     }
 }
+

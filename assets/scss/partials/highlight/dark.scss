@@ -9,6 +9,6 @@ $error-color: red;
 $keyword-color: var(--primary);
 $text-color: $color;
 $name-color: var(--accent);
-$literal-color: var(--lightest);
+$literal-color: var(--accent);
 
 @import "common.scss";
