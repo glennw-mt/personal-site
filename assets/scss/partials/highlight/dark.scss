@@ -1,0 +1,14 @@
+/*
+*   Style: monokai
+*   https://xyproto.github.io/splash/docs/monokai.html
+*/
+
+$color: #f8f8f2;
+$background-color: black;
+$error-color: red;
+$keyword-color: var(--primary);
+$text-color: $color;
+$name-color: var(--accent);
+$literal-color: var(--lightest);
+
+@import "common.scss";

@@ -15,12 +15,11 @@ hasCJKLanguage: false
 languages:
     en:
         languageName: English
-        title: Example Site
+        title: Glenn Wallace
         weight: 1
         params:
             sidebar:
-                subtitle: Example description
-
+                subtitle: An aspiring physicist, mathematician and computer scientist.
 # services:
 #     # Change it to your Disqus shortname before using
 #     disqus:
