@@ -1,9 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tsukimi+Rounded:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
+
+// $serif_font: "Playfair Display";
+$serif_font: "Cormorant Upright";
+$sans_font: "Tsukimi Rounded";
+
 
 // Main colour scheme
 :root {
+    font-family: $serif_font !important;
+    font-weight: 400 !important;
     --dark: #6b2c39;
     --darker: #362E41;
     --darkest: #003049;
@@ -170,35 +178,35 @@
         font-size: 0.8em;
     }
 
-    --base-font-family: "Montserrat",
+    --base-font-family: $sans_font,
     sans-serif;
 
     .main-article {
-        font-family: "EB Garamond" !important;
+        font-family: $serif_font !important;
     }
 
     .article-title {
-        font-family: "EB Garamond" !important
+        font-family: $serif_font !important
     }
 
     .article-content {
-        font-family: "EB Garamond";
+        font-family: $serif_font;
     }
 
     .article-category {
-        font-family: "Montserrat";
+        font-family: $sans_font;
     }
 
     .article-subtitle {
-        font-family: "EB Garamond";
+        font-family: $serif_font;
     }
 
     .article-time {
-        font-family: "Montserrat";
+        font-family: $sans_font;
     }
     
     .article-tags {
-        font-family: "Montserrat";
+        font-family: $sans_font;
         a {
             font-size: 0.75em;
             padding-top: 0.25em;
@@ -209,12 +217,12 @@
     }
 
     .article-copyright {
-        font-family: "Montserrat";
+        font-family: $sans_font;
         font-size: 0.75em !important;
     }
 
     #TableOfContents {
-        font-family: "EB Garamond";
+        font-family: $serif_font;
         font-weight: 800;
     }
 }
